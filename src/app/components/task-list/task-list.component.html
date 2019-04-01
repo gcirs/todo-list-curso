@@ -1,5 +1,16 @@
-<input [(ngModel)]="taskMessage" />
-<button class="btn" (click)="addTask()">CREATE</button>
+<div class="form">
+  <div>
+    <label>Name</label>
+    <input [(ngModel)]="taskMessage" />
+  </div>
+
+  <div>
+    <label>Description</label>
+    <textarea [(ngModel)]="taskDescription"></textarea>
+  </div>
+
+  <button class="btn" (click)="addTask()">CREATE</button>
+</div>
 
 <ul>
   <app-task
