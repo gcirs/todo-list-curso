@@ -1,8 +1,17 @@
 <li [ngClass]="{ urgent: task.urgent }" [style.background]="getBg()">
   <div class="content">
-    {{ task.message }} {{ task.urgent ? "(URGENTE)" : "" }}
+    <span *ngIf="!isEditing" (click)="toggleEdit()"
+      >{{ task.message }} {{ task.urgent ? "(URGENTE)" : "" }}</span
+    >
+    <div>
+      <input *ngIf="isEditing" [(ngModel)]="task.message" />
+      <button class="btn" (click)="toggleEdit()" *ngIf="isEditing">Done</button>
+    </div>
 
     <div class="actions">
+      <button *ngIf="!task.urgent" class="btn" (click)="setUrgent()">
+        MARK AS URGENT
+      </button>
       <button class="btn" (click)="toggleDescription()">
         {{ displayDescription ? "-" : "+" }}
       </button>

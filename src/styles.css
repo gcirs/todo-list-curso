@@ -25,3 +25,17 @@
 .btn.active {
   background-color: #d0d3d6;
 }
+
+input,
+textarea {
+  background: transparent;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  border-bottom: 1px solid grey;
+  outline: none;
+}
+
+input:focus {
+  border-bottom: 1px solid black;
+}
