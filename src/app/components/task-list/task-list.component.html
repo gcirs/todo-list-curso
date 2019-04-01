@@ -14,7 +14,9 @@
     <input type="checkbox" [(ngModel)]="isUrgent" />
   </div>
 
-  <button class="btn" (click)="addTask()">CREATE</button>
+  <button class="btn" (click)="addTask()" [disabled]="!filledInputs()">
+    CREATE
+  </button>
 </div>
 
 <ul>

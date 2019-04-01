@@ -37,6 +37,10 @@ export class TaskListComponent {
     this.isUrgent = false;
   }
 
+  filledInputs(): boolean {
+    return this.taskMessage !== "" && this.taskDescription !== "";
+  }
+
   deleteTask(task: Task) {
     this.taskList.removeTask(task);
   }

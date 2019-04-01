@@ -10,7 +10,7 @@
   text-decoration: none;
   font-weight: 700;
   padding: 0.35em 1em;
-  background-color: #eaeef1;
+  background-color: #fff;
   border-radius: 3px;
   color: rgba(0, 0, 0, 0.6);
   border: 1px solid #eee;
@@ -18,7 +18,7 @@
 
 .btn:hover,
 .btn.hover {
-  background-color: #fff;
+  background-color: #eaeef1;
 }
 
 .btn:active,
