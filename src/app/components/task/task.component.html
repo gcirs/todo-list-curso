@@ -1,10 +1,19 @@
-<li [style.background]="getBg()">
-  {{ task.message }}
+<li [ngClass]="{ urgent: task.urgent }" [style.background]="getBg()">
+  <div class="content">
+    {{ task.message }} {{ task.urgent ? "(URGENTE)" : "" }}
 
-  <div class="actions">
-    <button class="btn" (click)="complete(task)">
-      COMPLETE
-    </button>
-    <button class="btn" (click)="deleteTask(task)">DELETE</button>
+    <div class="actions">
+      <button class="btn" (click)="toggleDescription()">
+        {{ displayDescription ? "-" : "+" }}
+      </button>
+      <button class="btn" (click)="complete(task)">
+        COMPLETE
+      </button>
+      <button class="btn" (click)="deleteTask(task)">DELETE</button>
+    </div>
+  </div>
+
+  <div *ngIf="displayDescription" class="description">
+    {{ task.description }}
   </div>
 </li>

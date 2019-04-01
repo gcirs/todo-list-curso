@@ -11,17 +11,30 @@ import { Type } from "src/app/models/type";
 export class TaskListComponent {
   taskList: List;
   taskMessage = "";
+  taskDescription = "";
+  isUrgent = false;
 
   constructor() {
     this.taskList = new List();
-    const task = new Task("Tarea de ejemplo", Type.Incomplete);
+    const task = new Task(
+      "Tarea de ejemplo",
+      Type.Incomplete,
+      "Desc de ejemplo"
+    );
     this.taskList.addTask(task);
   }
 
   addTask() {
-    const task = new Task(this.taskMessage, Type.Incomplete);
+    const task = new Task(
+      this.taskMessage,
+      Type.Incomplete,
+      this.taskDescription,
+      this.isUrgent
+    );
     this.taskList.addTask(task);
     this.taskMessage = "";
+    this.taskDescription = "";
+    this.isUrgent = false;
   }
 
   deleteTask(task: Task) {

@@ -1,8 +1,9 @@
 .form {
   display: block;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #eee;
-  jmargin-bottom: 60px;
+  padding: 30px 60px;
+  border: 1px solid #eee;
+  margin-bottom: 60px;
+  border-radius: 3px;
 }
 
 ul {

@@ -10,6 +10,11 @@ import { Type } from "src/app/models/type";
 export class TaskComponent {
   @Input() task: Task;
   @Output() delete: EventEmitter<Task> = new EventEmitter<Task>();
+  displayDescription = false;
+
+  toggleDescription() {
+    this.displayDescription = !this.displayDescription;
+  }
 
   deleteTask(task: Task) {
     this.delete.emit(task);

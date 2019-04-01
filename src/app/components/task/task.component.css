@@ -3,10 +3,17 @@ li {
   margin-bottom: 30px;
   color: white;
   font-weight: 600;
+  border-radius: 3px;
+}
+
+.urgent {
+  border: 1px solid orangered;
+}
+
+.content {
   display: flex;
   justify-content: space-between;
   line-height: 30px;
-  border-radius: 3px;
 }
 
 button {

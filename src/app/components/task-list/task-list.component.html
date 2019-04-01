@@ -9,6 +9,11 @@
     <textarea [(ngModel)]="taskDescription"></textarea>
   </div>
 
+  <div>
+    <label>Urgente</label>
+    <input type="checkbox" [(ngModel)]="isUrgent" />
+  </div>
+
   <button class="btn" (click)="addTask()">CREATE</button>
 </div>
 
