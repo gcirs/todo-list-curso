@@ -1,0 +1,11 @@
+<input [(ngModel)]="taskMessage" />
+<button class="btn" (click)="addTask()">CREATE</button>
+
+<ul>
+  <app-task
+    *ngFor="let task of taskList.list"
+    (delete)="deleteTask($event)"
+    [task]="task"
+  >
+  </app-task>
+</ul>

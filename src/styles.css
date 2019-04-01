@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+.btn {
+  outline: none;
+  font-size: 0.825em;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.35em 1em;
+  background-color: #eaeef1;
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #eee;
+}
+
+.btn:hover,
+.btn.hover {
+  background-color: #fff;
+}
+
+.btn:active,
+.btn.active {
+  background-color: #d0d3d6;
+}
